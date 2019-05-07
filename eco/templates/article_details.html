@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block body %}
+				
+				{{ article.body }}<br><br><br>
+                <a> <img src="{{ article.diy_files.url }}" height="200"></a>
+                <br><br>
+                DIY Package Price: {{ article.diy_package }} <br>
+                
+                Quantity Remaining: {{ article.package_quantity }} <br>
+                Author: {{ article.author }} <br>
+
+{% endblock body %}

@@ -1,4 +1,5 @@
-#!/home/aclayton/diy/diy/bin/python2
+#!/home/aclayton/diy/diy/bin/python3
+
 # -*- coding: utf-8 -*-
 import re
 import sys

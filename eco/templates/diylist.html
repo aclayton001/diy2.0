@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block body %}
+	{% for article in object_list %}
+		<div class="post-entry">
+					<a href="{% url 'article-details' article.id %}">{{article.title}}</a>
+					<br>
+					{{ article.body }} <br>
+					<a> <img src="{{ article.diy_files.url }}" height="100"</a>
+                    <br><br>
+                    Author: {{ article.author }} <br>
+                    Price: {{ article.diy_package }} &nbsp;&nbsp;
+                    <span class="storefront_add_to_cart">
+                    <a href="{% url 'add_to_cart' article.id %}">[Add to Cart]</a>
+                </span>
+
+                    <br> Quantity: {{ article.package_quantity }}
+<br><br>
+
+
+		</div>
+	{% endfor %}
+{% endblock body %}
